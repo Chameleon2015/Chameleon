@@ -15,7 +15,7 @@
   </extension>
 </addon>
 
-    <addon id="repository.Chameleon" name="Chameleon Repo" version="1.0.1" provider-name="Chameleon">
+    <addon id="repository.Chameleon" name="Chameleon Repo" version="1.0.2" provider-name="Chameleon">
         <requires>
             <import addon="xbmc.addon" version="12.0.0"/>
         </requires>
