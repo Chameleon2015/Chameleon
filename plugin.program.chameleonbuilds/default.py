@@ -14,7 +14,7 @@ ADDON_ID = 'plugin.program.chameleonbuilds'
 BASEURL = 'http://chameleon.x10host.com/Builds'
 ADDON = xbmcaddon.Addon(id=ADDON_ID)
 HOME = ADDON.getAddonInfo('path')
-VERSION = "1.0.4"
+VERSION = "1.0.5"
 PATH = "Chameleon Builds"
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + ADDON_ID , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + ADDON_ID, 'icon.png'))
