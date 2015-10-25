@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <addon id="repository.Chameleon" name="Chameleon Repo" version="0.1.0" provider-name="Chameleon">
+    <addon id="repository.Chameleon" name="Chameleon Repo" version="1.0.1" provider-name="Chameleon">
         <requires>
             <import addon="xbmc.addon" version="12.0.0"/>
         </requires>
         <extension point="xbmc.addon.repository" name="Chameleon Repo">
-            <info compressed="false">https://raw.githubusercontent.com/Chameleon2015/chameleon/_repo/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/Chameleon2015/chameleon/_repo/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/Chameleon2015/chameleon/_repo/</datadir>
+            <info compressed="false">https://raw.github.com/Chameleon2015/chameleon/_repo/addons.xml</info>
+            <checksum>https://raw.github.com/Chameleon2015/chameleon/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.github.com/Chameleon2015/chameleon/_repo/</datadir>
             <hashes>false</hashes>
         </extension>
         <extension point="xbmc.addon.metadata">
