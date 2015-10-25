@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="Log In">
+		<setting id="username" label="UserName" type="text" default="" visible="true"  enable="!eq(-1,false)"/>
+		<setting id="password" label="Password" type="text" default="" visible="true"   enable="!eq(-2,false)"  option="hidden"/>
+   	</category>
+	
+	<category label="Auto-View">
+		<setting id="auto-view" type="bool" label="Enable Auto View" default="true"/>
+		<setting id="default-view" type="number" label="Default View" default="500" enable="!eq(-1,false)"/>
+	</category>  	
+</settings>
