@@ -14,7 +14,7 @@ ADDON_ID = 'plugin.program.chameleonbuilds'
 BASEURL = 'http://chameleon.x10host.com/Builds'
 ADDON = xbmcaddon.Addon(id=ADDON_ID)
 HOME = ADDON.getAddonInfo('path')
-VERSION = "1.0.5"
+VERSION = "1.0.6"
 PATH = "Chameleon Builds"
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + ADDON_ID , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + ADDON_ID, 'icon.png'))
@@ -37,14 +37,56 @@ def FAMILY():
 	addDir('Link 2 - X10Host','http://chameleon.x10host.com/Builds/ChameleonV1.3.zip',10,ART+'L2X10Host.png',FANART,'')
 	addDir('Link 3 - Archive.org','https://archive.org/download/ChameleonV1.3/ChameleonV1.3.zip',10,ART+'L3Archive.png',FANART,'')
 	addDir('Build Fixes','',4,ART+'BuildFixes.png',FANART,'')
-	addDir('Build Updates','',9,ART+'BuildUpdates.png',FANART,'')
+	#addDir('Build Updates','',9,ART+'BuildUpdates.png',FANART,'')
+	addDir('Optional Upgrades','',13,ART+'OptionalUpgrades.png',FANART,'')
 	AUTO_VIEW('500')
+
+#-------------------------
+
+def FamBuildFixes():
+	addDir('Stalker Fix','https://archive.org/download/StalkerFix_201510/StalkerFix.zip',10,ART+'StalkerFix.png',FANART,'')
+	AUTO_VIEW('500')
+
+#-------------------------
+
+def FamBuildUpdate():
+	
+	AUTO_VIEW('500')
+
+#-------------------------
+
+def FamBuildUpGrades():
+	addDir('Zeus Addon & Repo','https://archive.org/download/chris_ZEUS/zEUS.zip',10,ART+'Zeus.png',FANART,'')
+	addDir('i4ATV Addon & Repo','https://archive.org/download/chris_ZEUS/i4ATV.zip',10,ART+'i4ATV.png',FANART,'')
+	AUTO_VIEW('500')
+
+#-------------------------------------------------------
 	
 def SuperLight():
 	addDir('Super Light 88MB','https://www.dropbox.com/s/vazh0hi0178gmzc/SuperLight.zip?dl=1',10,ART+'L1DropBox.png',FANART,'')
 	addDir('Build Fixes','',8,ART+'BuildFixes.png',FANART,'')
 	addDir('Build Updates','',12,ART+'BuildUpdates.png',FANART,'')
 	AUTO_VIEW('500')
+
+#-------------------------
+
+def SLBuildFixes():
+	
+	AUTO_VIEW('500')
+
+#-------------------------
+
+def SLBuildUpdate():
+	
+	AUTO_VIEW('500')
+
+#-------------------------
+
+def SLBuildUpGrades():
+	
+	AUTO_VIEW('500')
+
+#-------------------------------------------------------
 
 def Kids():
 	addDir('Link 1 - DropBox','https://www.dropbox.com/s/dhso3aaxaog8kq2/KidsV1.1.zip?dl=1',10,ART+'L1DropBox.png',FANART,'')
@@ -54,31 +96,21 @@ def Kids():
 	addDir('Build Updates','',11,ART+'BuildUpdates.png',FANART,'')
 	AUTO_VIEW('500')
 
-#-------------------------------------------------------
-
-def FamBuildFixes():
-	addDir('Stalker Fix','https://archive.org/download/StalkerFix_201510/StalkerFix.zip',10,ART+'StalkerFix.png',FANART,'')
-	AUTO_VIEW('500')
+#-------------------------
 
 def KidBuildFixes():
 	
 	AUTO_VIEW('500')
 
-def SLBuildFixes():
-	
-	AUTO_VIEW('500')
-
-#-------------------------------------------------------
-
-def FamBuildUpdate():
-	
-	AUTO_VIEW('500')
+#-------------------------
 
 def KidBuildUpdate():
 	
 	AUTO_VIEW('500')
 
-def SLBuildUpdate():
+#-------------------------
+
+def KidBuildUpGrades():
 	
 	AUTO_VIEW('500')
 
@@ -277,18 +309,20 @@ print "Name: "+str(name)
 print "IconImage: "+str(iconimage)
 
 		
-if mode   == None                 : INDEX()
-elif mode == 2        	  		  : FAMILY()
-elif mode == 3					  : SuperLight()
-elif mode == 4					  : FamBuildFixes()
-elif mode == 6              	  : Kids()
-elif mode == 7					  : KidBuildFixes()
-elif mode == 8					  : SLBuildFixes()
-elif mode == 9					  : FamBuildUpdate()
-elif mode == 10			          : WIZARD(name,url,description)
-elif mode == 11					  : KidBuildUpdate()
-elif mode == 12					  : SLBuildUpdate()
-
+if mode   == None               : INDEX()
+elif mode == 2        	  		: FAMILY()
+elif mode == 3					: SuperLight()
+elif mode == 4					: FamBuildFixes()
+elif mode == 6              	: Kids()
+elif mode == 7					: KidBuildFixes()
+elif mode == 8					: SLBuildFixes()
+elif mode == 9					: FamBuildUpdate()
+elif mode == 10			        : WIZARD(name,url,description)
+elif mode == 11					: KidBuildUpdate()
+elif mode == 12					: SLBuildUpdate()
+elif mode == 13					: FamBuildUpGrades()
+elif mode == 14					: KidBuildUpGrades()
+elif mode == 15					: SLBuildUpGrades()
 
 #-------------------------------------------------------
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
